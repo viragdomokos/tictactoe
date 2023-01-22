@@ -1,0 +1,201 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url(/images/tictactoebackground2.jpg);
+    background-size: 100%;
+    background-position: center;
+    max-height: 90%;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    padding: 40px;
+    block-size: 100%;
+}
+
+
+.display{    
+    position: fixed;
+    z-index: 9;
+
+    top: 75;
+
+    left: 52%;
+
+    width: 100%;
+    max-width: calc(100vh - 160px);   
+    height: 40px;
+    transform: translateX(-50%);
+
+    font-family: fantasy;
+    font-weight: 300;
+    font-size: 26px;
+}
+
+aside {
+    position: relative;
+    display: float;
+    vertical-align: right;
+    width: 50%;
+    grid-template-columns: 25% 50% 25%;
+    top: -98%;
+    left: 27%;
+}
+
+aside > section:not(:last-child) {
+    border-right: 0px solid #ff6f3c;
+    
+}
+
+aside > section > input, 
+aside > section > button, 
+aside > section > select {
+    height: 40px;
+    width: 60%;
+    
+
+   
+    color: dimgray;
+    font-weight: 400;
+    appearance: none;
+    outline: none;
+    border: none;
+
+    font-family: fantasy;
+    font-size: 24px;
+
+    background-color:transparent; 
+}
+aside > section > button,
+aside > section > select {
+    
+    background-color:pink; 
+}
+aside > section > select:hover,
+aside > section > button:hover{
+    color: #155263;
+    background-color: pink;
+    cursor: pointer;
+}
+aside > section > input{
+    width: 400px;
+    padding-left: 10px;
+}
+aside > section > input::placeholder{
+    color: dimgray;
+}
+select,
+option {
+    text-align: center;
+}
+
+.hide {
+    display: none;
+}
+
+.display {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    right: 0;
+    top: 90px;
+
+    color: dimgray;
+
+    /* border: 1px solid; */
+    border-bottom: 1px solid;
+
+}
+.turndisplay {
+    display: flex;  
+
+    justify-content: center;
+    align-items: center;
+    top:100px;
+
+    color: dimgray;
+
+    border: 1px solid;
+    border-top: none;
+    border-bottom: none;
+    font-family: fantasy;
+    font-weight: 300;
+    font-size: 38px;
+
+}
+
+.container {
+    width: calc(100vh - 80px);
+    max-width: 50%;
+    height: 70%;
+    display: grid;
+    grid-template-columns: 40px repeat(3, 1fr) 40px;
+    grid-template-rows: 40px repeat(3, 1fr) 40px;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 100,
+  'GRAD' 0,
+  'opsz' 48
+  
+}
+
+.tile {
+    font-size: 80px;
+    font-family: Sofia, sans-serif;
+    cursor: pointer;    
+}
+
+.cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* border-right: 3px ridge; */
+    /* border-bottom: 3px ridge; */
+   
+    color: #5d5bce;
+    
+
+}
+
+.cell:nth-child(-n+5){
+    border-right: none;
+}
+.cell:nth-child(5n+1){
+    border-bottom: none;
+}
+.cell:nth-child(5n+5){
+    border-right: none;
+    border-bottom: none;
+}
+
+.cell:not(.tile){
+    font-size: 32px;
+    font-weight: 200;
+    font-family: 'Barlow', sans-serif;
+    color: pink;
+}
+
+#B1, #B2, #B3 {
+    border-top: 3px solid;
+    border-bottom: 3px solid;
+    border-color:dimgray;
+}
+
+#A2, #B2, #C2 {
+    border-left: 3px solid;
+    border-right: 3px solid;
+    border-color:dimgray;
+}

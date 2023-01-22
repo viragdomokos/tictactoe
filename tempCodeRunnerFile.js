@@ -1,0 +1,2 @@
+
+        if(currentPlayer == "O") {
